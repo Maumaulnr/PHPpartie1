@@ -27,22 +27,26 @@ Affichage : L’enfant qui a 10 ans appartient à la catégorie « Minime ».
 
 
 // Déclaration variable
-$age = 8;
+$age = 10;
+$poussin = strtr("poussin");
+$pupille = "pupille";
+$minime = "minime";
+$cadet = "cadet";
 $resultat;
 
 
 
 // condition et affichage
 
-if(gettype($age) == "double" || gettype($age) == "integer" ) {      // gettype — Retourne le type de la variable
+if(gettype($age) == "string" || gettype($age) == "integer" ) {      // gettype — Retourne le type de la variable
     if($age >= 6 ) {
-        $resultat = str_"Poussin";
+        $resultat = $poussin;
     } elseif($age >= 8 ) {
-        $resultat = "Pupille";
+        $resultat = $pupille;
     } elseif($age >= 10 ) {
-        $resultat = "Minime";
+        $resultat = $minime;
     } elseif($age >= 12) {    // Supérieur ou égal à 12
-        $resultat = "Cadet";
+        $resultat = $cadet;
     }
 
     echo "L'enfant qui a $age ans est : $resultat.<br>";
