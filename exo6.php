@@ -16,13 +16,14 @@ prix HT = 9,99€ (59,94 - 9,99)
 Montant total = (9,99 + 2) x 5 = 11,99 x 5 = 59,95€
 -->
 
+<h2>Résultat</h2>
 
 <?php
 
 // Déclaration variable
-$nbArticle;  // 5
-$prixHT;     // 9,99
-$tauxTVA;   // décimal (0.2)
+$nbArticle = 5;  // 5
+$prixHT = 9.99;     // 9,99
+$tauxTVA = 0.2;   // décimal (0.2)
 $montantTotal;
 
 
@@ -31,7 +32,7 @@ $montantTotal;
 
 $montantTotal = $nbArticle * $prixHT + $nbArticle * $prixHT * $tauxTVA;
 
-echo "Le total TTC est de $totalTTC €<br>";
+echo "Le total TTC est de $montantTotal €<br>";
 
 
 
