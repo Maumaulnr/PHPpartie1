@@ -28,10 +28,6 @@ Affichage : L’enfant qui a 10 ans appartient à la catégorie « Minime ».
 
 // Déclaration variable
 $age = 10;
-$poussin = strtr("poussin");
-$pupille = "pupille";
-$minime = "minime";
-$cadet = "cadet";
 $resultat;
 
 
