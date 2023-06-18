@@ -1,5 +1,7 @@
 <h1>Exo 7 PHP</h1>
 
+<!-- http://localhost/LENOIR-Maurane/partie1/exo7.php -->
+
 <p>
 Ecrire un algorithme permettant de renvoyer la catégorie d’un enfant en fonction de son âge: <br>
 Poussin: entre 6 et 7 ans <br>
