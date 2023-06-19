@@ -22,18 +22,30 @@ else "Non imposable"
 
 
 // Déclaration variable
-$age = 20;
-$sexe = "F";
-$categorie;
-$i;
+// $age = 20;
+// $sexe = "F";
+// $categorie;
+// $i;
 
 // condition et affichage
 
-for ($i=0; $age + $sexe >= 18 && $age + $sexe <= 35; $age) { 
-    if (condition) {
-        echo ;
-    }
-}
+// for ($i=0; $age + $sexe >= 18 && $age + $sexe <= 35;) { 
+//     if (condition) {
+//         echo ;
+//     }
+// }
 
+
+$sexe = "F";
+$age = 35;
+$result;
+
+$result = $age >= 18 && $age <= 35 ? "imposable" : "non imposable";
+echo "Age :". " ". $age. "<br>". "Sexe :". " ". $sexe. "<br>". "La personne est". " ". $result. "<br>";
+
+$sexe = "H";
+$age = 19;
+$result = $age > 20 ? "imposable" : "non imposable";
+echo "Age : ". $age. "<br>". "Sexe : ". $sexe. "<br>". "La personne est ". $result. "<br>";
 
 ?>
