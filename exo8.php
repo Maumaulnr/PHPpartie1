@@ -29,7 +29,7 @@ $resultat;
 // condition et affichage
 
 for ($i=1; $i <= 10; $i++) { 
-    echo "$i". "*". "$n". " ". "=". " ". $i*$n. "<br>";
+    echo "$i". "x". "$n". " ". "=". " ". $i*$n. "<br>";
 }
 
 
