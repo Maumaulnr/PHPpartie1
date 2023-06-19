@@ -15,6 +15,9 @@ Sa moyenne générale est donc de : 11.22 <br>
 Il faut additionner note par note (10+12+...)
 Il faut compter combien il y a de note 
 Puis diviser la somme des notes par le nombre de notes
+
+
+revenir sur exo 10 et 12
 -->
 
 <h2>Résultat</h2>
