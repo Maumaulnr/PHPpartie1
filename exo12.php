@@ -56,8 +56,10 @@ function ecrireBonjour($tableau1) {
         "FRA" => "Salut"
     );
 
+// isset() renverra false lors de la vérification d'une variable de valeur null.
+// valeur null indique l'absence de valeur ou l'absence de référence à un objet
     foreach ($tableau1 as $prenom => $langue) {
-        isset($tableau2[$langue]);
+        isset($tableau2[$langue]);  
         echo $tableau2[$langue]. " ". $prenom. "<br>";
     }
 }
