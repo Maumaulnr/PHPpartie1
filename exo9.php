@@ -25,7 +25,7 @@ $age = 35;
 $result;
 
 $result = $age >= 18 && $age <= 35 ? "imposable" : "non imposable";
-echo "Age :". " ". $age. "<br>". "Sexe :". " ". $sexe. "<br>". "La personne est". " ". $result. "<br>";
+echo "Age : ". $age. "<br>". "Sexe : ". $sexe. "<br>". "La personne est". $result. "<br>";
 
 $sexe = "H";
 $age = 19;

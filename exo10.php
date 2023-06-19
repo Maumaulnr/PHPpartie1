@@ -1,26 +1,45 @@
-<h1>Exo 9 PHP</h1>
+<h1>Exo 10 PHP</h1>
 
-<!-- http://localhost/LENOIR-Maurane/ALGO-PHP/partie1/exo9.php -->
+<!-- http://localhost/LENOIR-Maurane/ALGO-PHP/partie1/exo10.php -->
 
 <p>
-Nous souhaitons savoir si une personne est imposable en fonction de son âge et de son sexe. <br>
-Si la personne est une femme dont l’âge est compris entre 18 et 35 ans ou si c’est un homme de plus de 20 ans, alors celle-ci est imposable (sinon ce n’est pas le cas, « non imposable »). <br>
+A partir d’un montant à payer et d’une somme versée pour régler un achat, écrire l’algorithme qui affiche à un utilisateur un rendu de monnaie en nombre de billets de 10 € et 5 €, de pièces de 2 € et 1 €. <br>
 Affichage : <br>
-Age : 32 <br>
-Sexe : F <br>
-La personne est imposable. <br>
+Montant à payer : 152 € <br>
+Montant versé : 200 € <br>
+Reste à payer : 48 € <br>
+<br>
+*************************************************** <br>
+<br>
+Rendue de monnaie : <br>
+4 billets de 10 € - 1 billet de 5 € - 1 pièce de 2 € - 1 pièce de 1 € <br>
 </p>
 
 <!-- 
-femme >= 18 && femme <= 35 || homme > 20 = imposable
-else "Non imposable"
+$montant_versé - $montant_a_payer = $reste_a_payer
+Par exemple sur 48 € il faut rendre : 
+4x billets de 10€ , 1x billet de 5€ et 1x pièce de 2€ et 1x pièce de 1€
+48 - 10 = 38 - 10 = 28 - 10 = 18 - 10 = 8 - 5 = 3 - 2 = 1 - 1 = 0
 -->
 
 <h2>Résultat</h2>
 
 <?php
 
-
 // Déclaration variable
+$montant_a_payer = 150;
+$montant_versé = 200;
+$reste_a_payer = 50;
+$rendue_de_monnaie;
+$i;
+
 // condition et affichage
+
+echo "Montant à payer : ". $montant_a_payer. " €". "<br>". "Montant versé : ". $montant_versé. " €". "<br>";
+
+echo "Reste à payer : ". $reste_a_payer. " €". "<br>";
+
+
+echo "Rendue de monnaie : ". $rendue_de_monnaie. "€". "<br>";
+
 ?>
