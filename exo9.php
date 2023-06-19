@@ -20,22 +20,6 @@ else "Non imposable"
 
 <?php
 
-
-// Déclaration variable
-// $age = 20;
-// $sexe = "F";
-// $categorie;
-// $i;
-
-// condition et affichage
-
-// for ($i=0; $age + $sexe >= 18 && $age + $sexe <= 35;) { 
-//     if (condition) {
-//         echo ;
-//     }
-// }
-
-
 $sexe = "F";
 $age = 35;
 $result;
