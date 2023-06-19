@@ -30,8 +30,10 @@ Par exemple sur 48 € il faut rendre :
 $montant_a_payer = 150;
 $montant_versé = 200;
 $reste_a_payer = 50;
+$systeme_monnaie = [1,2,5,10];  // valeur des billets et pièces
+$lst_pieces = [];   // liste de pièces à rendre
 $rendue_de_monnaie;
-$i;
+$i = strlen($systeme_monnaie[]) - 1;
 
 // condition et affichage
 
@@ -39,7 +41,8 @@ echo "Montant à payer : ". $montant_a_payer. " €". "<br>". "Montant versé : 
 
 echo "Reste à payer : ". $reste_a_payer. " €". "<br>";
 
-
-echo "Rendue de monnaie : ". $rendue_de_monnaie. "€". "<br>";
+// while ($reste_a_payer > 0 && $i < ) {
+    
+// }
 
 ?>
