@@ -76,7 +76,7 @@ $calcul = $texte - 5;
 echo $calcul."<br>";
 
 // Renvoie le type de la variable spécifiée en paramètre
-echo gettype($tableau1);
+echo gettype($tableau1);    // integer, double, string, array, ...
 var_dump($tableau1);
 
 

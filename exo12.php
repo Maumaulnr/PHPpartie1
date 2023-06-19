@@ -31,22 +31,37 @@ Hola Virgile <br>
 
 // Déclaration variable
 // clé (key) -> valeur (value) (clé doit être unique)
-$tableau = array(
+$tableau1 = array(
     "Mickaël" => "FRA",
     "Virgile" => "ESP",
     "Marie-Claire" => "ENG"
 );
-$key;
-$val;
-
-ksort($tableau);    // trier sur la clé (A à Z)
+$prenom;
+$langue;
 
 // condition et affichage
 
+ksort($tableau1);    // trier sur la clé (A à Z)
 
-foreach ($tableau as $key => $val) {
-    echo "$key = $val\n". "<br>";
+foreach ($tableau1 as $prenom => $langue) {
+    echo "$prenom = $langue". "<br>";
 }
 
+// ecrire une fonction personnalisé qu'on peut appeler
+// Donnez à la fonction un nom qui reflète ce qu'elle fait !
+function ecrireBonjour($tableau1) {
+    $tableau2 = array(
+        "ENG" => "Hello",
+        "ESP" => "Hola",
+        "FRA" => "Salut"
+    );
+
+    foreach ($tableau1 as $prenom => $langue) {
+        isset($tableau2[$langue]);
+        echo $tableau2[$langue]. " ". $prenom. "<br>";
+    }
+}
+
+ecrireBonjour($tableau1);
 
 ?>

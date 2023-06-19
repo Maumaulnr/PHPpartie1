@@ -27,22 +27,47 @@ Par exemple sur 48 € il faut rendre :
 <?php
 
 // Déclaration variable
-$montant_a_payer = 150;
+$montant_a_payer = 152;
 $montant_versé = 200;
-$reste_a_payer = 50;
-$systeme_monnaie = [1,2,5,10];  // valeur des billets et pièces
-$lst_pieces = [];   // liste de pièces à rendre
-$rendue_de_monnaie;
-$i = strlen($systeme_monnaie[]) - 1;
+$reste_a_payer = $montant_versé - $montant_a_payer;
+$billet_10 = 0;
+$billet_5 = 0;
+$piece_2 = 0;
+$piece_1 = 0;
 
 // condition et affichage
 
-echo "Montant à payer : ". $montant_a_payer. " €". "<br>". "Montant versé : ". $montant_versé. " €". "<br>";
+    // On affiche d'abord le montant à payer, le montant versé et le reste à payer
+echo "Montant à payer : ". $montant_a_payer. "€". "<br>";
+echo "Montant versé : ". $montant_versé. "€". "<br>";
+echo "Reste à payer : ". $reste_a_payer. "€". "<br>";
 
-echo "Reste à payer : ". $reste_a_payer. " €". "<br>";
+    // tant que reste à payer est supérieur à 10, déduire 10 à chaque boucle et etc.
+while ($reste_a_payer >= 10) {
+    $reste_a_payer -= 10;   // " -= " soustrait une valeur (10) à la variable $reste_a_payer (48-10)
+    $billet_10++;
+}
 
-// while ($reste_a_payer > 0 && $i < ) {
-    
-// }
+while ($reste_a_payer >= 5) {
+    $reste_a_payer -= 5;
+    $billet_5++;
+}
+
+while ($reste_a_payer >= 2) {
+    $reste_a_payer -= 2;
+    $piece_2++;
+}
+
+while ($reste_a_payer >= 1) {
+    $reste_a_payer -= 1;
+    $piece_1++;
+}
+
+echo "Rendue de monnaie : ". "<br>";
+echo $billet_10. " billets de 10€". "<br>";
+echo $billet_5. " billets de 5€". "<br>";
+echo $piece_2. " pièces de 2€". "<br>";
+echo $piece_1. " billets de 1€". "<br>";
+
 
 ?>
