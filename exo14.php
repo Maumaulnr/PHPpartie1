@@ -13,6 +13,12 @@ Faire la date la plus récente moins la date de naissance
 dans l'exemple il y a :
 (3X 10ans) - (3X 1an) - (4X 1mois) - (4X 1jr)
 Dans cet exercice on part de la ddn (17/01/1985) vers le 21/05/2018
+1 an = 12 mois = 365 jours
+33 ans = (33 x 12mois)/1 = 396 mois = (396 x 365)/12 = 12 045 jours
+4 mois = (4mois x 365jours)/12 = 121,67 jours (arrondi à deux décimals)
+4 jours
+12045 + 122 + 4  = 12 171
+Entre le 17/01/1985 et le 21/05/2018, il s'est écoulé 12177 jours soit 33 ans, 4 mois et 4 jours.
 -->
 
 <h2>Résultat</h2>
@@ -20,40 +26,18 @@ Dans cet exercice on part de la ddn (17/01/1985) vers le 21/05/2018
 <?php
 
 // Déclaration variable
-$dateDeNaissance = date("1985/01/17");  // date("Y/m/d")
-$date = date("2018/05/21");
-$annee10 = 0;   // année par dizaine
-$annee = 0;
-$mois = 0;
-$jour = 0;
+$dateDeNaissance = strtotime("1985-01-17");  // To avoid potential errors, you should YYYY-MM-DD dates or date_create_from_format() when possible.
+$date = strtotime("2018-05-21");
+
 
 // condition et affichage
 
-    // On s'occupe d'abord des années puis des mois et des jours
-while ($dateDeNaissance <= 10) {
-    $reste_a_payer += 10;   // " -= " additionner une valeur (10) à la variable $dateDeNaissance (17/10/1985 + 10 = 17/10/1995)
-    $annee10++;
-}
+$annees = ("2018" - "1985");
 
-while ($reste_a_payer >= 5) {
-    $reste_a_payer -= 5;
-    $billet_5++;
-}
+$mois = ("05" - "01");
 
-while ($reste_a_payer >= 2) {
-    $reste_a_payer -= 2;
-    $piece_2++;
-}
+$jours = ("21" - "17");
 
-while ($reste_a_payer >= 1) {
-    $reste_a_payer -= 1;
-    $piece_1++;
-}
-
-echo "Age de la personne : ";
-echo $annee10+$annee. " ans";
-echo $mois. " mois";
-echo $jour. " jours";
-
+echo "Age de la personne : ". "$annees  ans ". "$mois  mois ". "$jours  jours". "<br>";
 
 ?>
