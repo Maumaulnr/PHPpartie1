@@ -26,18 +26,20 @@ Entre le 17/01/1985 et le 21/05/2018, il s'est écoulé 12177 jours soit 33 ans,
 <?php
 
 // Déclaration variable
-$dateDeNaissance = strtotime("1985-01-17");  // To avoid potential errors, you should YYYY-MM-DD dates or date_create_from_format() when possible.
-$date = strtotime("2018-05-21");
+// $dateDeNaissance = strtotime("1985-01-17");  // To avoid potential errors, you should YYYY-MM-DD dates or date_create_from_format() when possible.
+// $date = strtotime("2018-05-21");
 
 
 // condition et affichage
 
-$annees = ("2018" - "1985");
+    // La fonction date_diff() renvoie la différence entre deux objets DateTime.
+    // La fonction date_create() renvoie un nouvel objet DateTime.
+    // La fonction date_format() renvoie une date formatée selon le format spécifié.
+    // %y = permet de récupérer la différence en années entre deux dates (même chose pour mois et jours)
+function calculAge($dateDeNaissance) {
+    $age = date_diff(date_create($dateDeNaissance), date_create("2018-05-21"));
+    return $age->format("Age de la personne %y ans, %m mois, %d jours");
+}
 
-$mois = ("05" - "01");
-
-$jours = ("21" - "17");
-
-echo "Age de la personne : ". "$annees  ans ". "$mois  mois ". "$jours  jours". "<br>";
-
+echo calculAge("1985-01-17");
 ?>
