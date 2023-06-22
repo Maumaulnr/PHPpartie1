@@ -38,7 +38,7 @@ class Personne {
     // Le constructeur va permettre d’initialiser des propriétés dès la création d’un objet
     // On déclare un constructeur de classe en utilisant la syntaxe function __construct()
     // Methods
-    public function __construct($prenom, $nom, $dateDeNaissance) {
+    public function __construct(string $prenom, string $nom, string $dateDeNaissance) {
         $this->_prenom = $prenom;
         $this->_nom = $nom;
         $this->_dateDeNaissance = $dateDeNaissance;
