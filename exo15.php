@@ -30,41 +30,41 @@ class Personne {
     // Propriétés
     //  public = accès aux propriétés depuis l’intérieur et l’extérieur de la class
     // private = évite les propriétés d'être modifié par une tierce personne (sécurité)
-    private $nom;
-    private $prenom;
-    private $dateDeNaissance;
+    private string $_nom;
+    private string $_prenom;
+    private string $_dateDeNaissance;
 
     // utilisation d'un constructeur : constructeur d’une classe est une méthode qui va être appelée (exécutée) automatiquement à chaque fois qu’on va instancier une classe.
     // Le constructeur va permettre d’initialiser des propriétés dès la création d’un objet
     // On déclare un constructeur de classe en utilisant la syntaxe function __construct()
     // Methods
     public function __construct($prenom, $nom, $dateDeNaissance) {
-        $this->prenom = $prenom;
-        $this->nom = $nom;
-        $this->dateDeNaissance = $dateDeNaissance;
+        $this->_prenom = $prenom;
+        $this->_nom = $nom;
+        $this->_dateDeNaissance = $dateDeNaissance;
     }
 
     // $this = appelé pseudo-variable et sert à faire référence à l’objet couramment utilisé.
-    public function getNom() {
-        return $this->nom;
+    public function getNom() : string {
+        return $this->_nom;
     }
 
     // public function setNom($new_nom) {
     //     $this->nom = $new_nom;
     // }
 
-    public function getPrenom() {
-        return $this->prenom;
+    public function getPrenom() : string {
+        return $this->_prenom;
     }
 
-    public function getDateDeNaissance() {
-        return $this->dateDeNaissance;
+    public function getDateDeNaissance() : string {
+        return $this->_dateDeNaissance;
     }
 
     // calculer la différence entre la date de naissance et la date d'aujourd'hui
     // %y = permet de récupérer la différence en années entre deux dates
     public function getAge() {
-        $dateDeNaissance = date_diff(date_create($this->dateDeNaissance), date_create("today"));
+        $dateDeNaissance = date_diff(date_create($this->_dateDeNaissance), date_create("today"));
         return $dateDeNaissance->format("%y ans");
     }
 }
