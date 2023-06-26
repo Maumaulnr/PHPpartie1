@@ -26,7 +26,7 @@ Pour i allant de 0 à 4
 <?php
 
 // Déclaration variable
-$marqueDeVoiture = ["Peugeot", "Renault", "BMW", "Mercedes"] ;   // marque de la voiture
+$marquesDeVoiture = ["Peugeot", "Renault", "BMW", "Mercedes"] ;   // marque de la voiture
 $nbMarque = count($marqueDeVoiture);    // compter le nombre de marques de voiture
 $i;     // nombre de voitures
 
@@ -35,7 +35,7 @@ echo "Il y a ". $nbMarque. " marques de voitures dans le tableau : ". "<br>"; //
 
 // afficher le contenu
 for ($i = 0; $i < $nbMarque; $i++) { 
-    echo $marqueDeVoiture[$i]."<br>";
+    echo $marquesDeVoiture[$i]."<br>";
 }
 
 
