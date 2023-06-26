@@ -63,6 +63,7 @@ while ($reste_a_payer >= 1) {
     $piece_1++;
 }
 
+// rendre la monnaie
 echo "Rendue de monnaie : ". "<br>";
 echo $billet_10. " billets de 10€". "<br>";
 echo $billet_5. " billets de 5€". "<br>";

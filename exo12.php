@@ -43,12 +43,14 @@ $langue;
 
 ksort($tableau1);    // trier sur la clé (A à Z)
 
-foreach ($tableau1 as $prenom => $langue) {
-    echo "$prenom = $langue". "<br>";
-}
+// affiche la valeur correspondant à sa clé
+// foreach ($tableau1 as $prenom => $langue) {
+//     echo "$prenom = $langue". "<br>";
+// }
 
 // ecrire une fonction personnalisé qu'on peut appeler
-// Donnez à la fonction un nom qui reflète ce qu'elle fait !
+// Donnez à la fonction un nom qui reflète ce qu'elle fait
+// On associe le bonjour dans la bonne langue en fonction du prénom
 function ecrireBonjour($tableau1) {
     $tableau2 = array(
         "ENG" => "Hello",
@@ -64,6 +66,7 @@ function ecrireBonjour($tableau1) {
     }
 }
 
+// afficher le tableau
 ecrireBonjour($tableau1);
 
 ?>

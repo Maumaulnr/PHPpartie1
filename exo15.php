@@ -65,7 +65,7 @@ class Personne {
     // %y = permet de récupérer la différence en années entre deux dates
     public function getAge() {
         $dateDeNaissance = date_diff(date_create($this->_dateDeNaissance), date_create("today"));
-        return $dateDeNaissance->format("%y ans");
+        return $dateDeNaissance->format("%y");
     }
 }
 
@@ -77,7 +77,8 @@ class Personne {
 $personne1 = new Personne("Michel", "DUPONT", "1980-02-19");
 $personne2 = new Personne("Alice", "DUCHEMIN", "1985-01-17");
 
-echo $personne1->getPrenom(). " ". $personne1->getNom(). " a ". $personne1->getAge(). " ans ". "<br>";
-echo $personne2->getPrenom(). " ". $personne2->getNom(). " a ". $personne2->getAge(). " ans ". "<br>";
+// afficher Nom, prénom, son âge en années
+echo $personne1->getPrenom(). " ". $personne1->getNom(). " a ". $personne1->getAge(). " ans. ". "<br>";
+echo $personne2->getPrenom(). " ". $personne2->getNom(). " a ". $personne2->getAge(). " ans. ". "<br>";
 
 ?>

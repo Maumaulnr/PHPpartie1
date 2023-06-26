@@ -41,5 +41,6 @@ function calculAge($dateDeNaissance) {
     return $age->format("Age de la personne %y ans, %m mois, %d jours");
 }
 
+// On affiche l'âge: année, mois, jours
 echo calculAge("1985-01-17");
 ?>
